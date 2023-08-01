@@ -1,0 +1,228 @@
+/*---Reset Document---*/
+*{
+    margin:0;
+    padding:0;
+    font-family:Helvetica, Arial, sans-serif;
+    box-sizing:border-box;
+}
+
+html, body{
+    height:100%;
+    background-color:#f0f2f5;
+}
+
+.clearfix{
+    clear:both;
+}
+
+/*------------------------------------------------*/
+
+section.facebook-main{
+    width:100%;
+    height:100%;
+}
+
+.container{
+    width:100%;
+    max-width:1024px;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    padding:0 18px 30px 0;
+}
+
+.left-elements{
+    width:500px;
+    height:180px;
+    position:relative;
+    top:60px;
+}
+
+.left-elements .logo{
+    width:249px;
+    height:60px;
+    background-image:url('../images/facebook-logo.png');
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.left-elements .description p{
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:28px;
+    color:black;
+    margin-top:12px;
+}
+
+.right-elements{
+    width:400px;
+    height:350px;
+    background-color:white;
+    justify-content:flex-end;
+    margin-left:auto;
+    box-shadow:0 0 5px 2px rgba(0,0,0,0.2);
+    border-radius:8px;
+}
+
+.form-container{
+    text-align:center;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+.form-container div input{
+    margin:10px 0;
+}
+
+.form-container div input[type="text"]{
+    margin-top:15px;
+}
+
+.form-container div input[type="text"], input[type="password"]{
+    width:90%;
+    height:50px;
+    padding-left:10px;
+    font-size:16px;
+    border:1px solid #ebedee;
+}
+
+.form-container div input[type="text"]:focus, input[type="password"]:focus{
+    outline:0;
+}
+
+.form-container div.btn1-form input[type=submit]{
+    width:90%;
+    height:50px;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+    background-color:#1877f2;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.form-container div.forgotten-account h2 a{
+    font-weight:normal;
+    font-size:15px;
+    color:#677ff2;
+    text-decoration:none;
+}
+
+.form-container div.forgotten-account h2 a:hover{
+    text-decoration:underline;
+}
+
+.form-container div.border-form{
+    width:90%;
+    border:1px solid #dadde1;
+    margin:15px auto;
+}
+
+.form-container div.btn2-form input[type="submit"]{
+    width:185px;
+    height:46px;
+    background-color:#42b72a;
+    color:white;
+    font-weight:bold;
+    font-size:17px;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.form-container div.btn1-form input[type=submit]:focus, .form-container div.btn2-form input[type="submit"]:focus{
+    outline:0;
+}
+
+.form-container div.btn2-form input[type="submit"]:hover{
+    background-color:#36a420;
+}
+
+.info-down-box{
+    width:100%;
+    max-width:1024px;
+    position:relative;
+    top:30%;
+    left:47%;
+    transform:translate(-50%, -50%);
+}
+
+.info-down-box span{
+    float:right;
+    font-size:15px;
+    color:black;
+    font-family:Arial, sans-serif;
+}
+
+.info-down-box span a{
+    text-decoration:none;
+    font-size:15px;
+    color:black;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+    padding-right:2px;
+}
+
+@media screen and (max-width:920px){
+
+    section.facebook-main{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    .container{
+        width:100%;
+        height:100%;
+        max-width:1024px;
+        position:relative;
+        top:0;
+        left:0;
+        transform:none;
+        display:inline-block;
+        padding:0;
+    }
+
+    .left-elements{
+        width:100%;
+        height:auto;
+        position:0;
+        top:60px;
+    }
+    
+    .left-elements .logo{
+        width:100%;
+        height:60px;
+    }
+    
+    .left-elements .description p{
+        display:none;
+    }
+
+    .right-elements{
+        width:95%;
+        max-width:400px;
+        height:auto;
+        justify-content:0;
+        margin-left:0;
+        box-shadow:0 0 5px 2px rgba(0,0,0,0.2);
+        border-radius:8px;
+        margin:0;
+        position:relative;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    .info-down-box{
+        display:none;
+    }
+}
+
+
+
+
+

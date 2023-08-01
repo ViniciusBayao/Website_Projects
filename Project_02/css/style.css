@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:normal;
+}
+
+html, body{
+    height:100%;
+}
+
+.container{
+    max-width:1024px;
+    margin:0 auto;
+}
+
+.clearfix{
+    clear:both;
+}
+
+header{
+    width:100%;
+    padding:20px;
+    background-color:#d6d6d6;
+}
+
+.logo-left{
+    width:150px;
+    height:60px;
+    float:left;
+    background-image:url('../img/logo1.png');
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.logo-right{
+    width:150px;
+    height:60px;
+    float:right;
+    background-image:url('../img/logo2.png');
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.banner{
+    width:100%;
+    height:480px;
+    background-image:url('../img/bg-form.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.banner-form{
+    padding:10px 2%;
+    height:100%;
+}
+
+form{
+    max-width:400px;
+    height:105%;
+    background-color:white;
+    float:right;
+    box-shadow:0 0 4px 4px rgba(0,0,0,0.2);
+}
+
+form div:not(.description){
+    padding:12px 10%;
+}
+
+.description{
+    background-color:rgb(210,210,210);
+    padding:20px 15px;
+    text-align:left;
+}
+
+.description h2{
+    text-transform:uppercase;
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.name{
+    margin-top:15px;
+}
+
+form div h3:not(.description), form div h3:not(.fields){
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form input[type=text], input[type=number]{
+    width:100%;
+    line-height:38px;
+    padding-left:2%;
+    border:1px solid #ccc;
+}
+
+form input[type=text]:focus, input[type=number]:focus, input[type=submit]:focus{
+    outline:0;
+}
+
+form input[type=submit]{
+    text-align:center;
+    width:100%;
+    line-height:38px;
+    color:white;
+    background-color:rgb(15, 80, 199);
+    border:0;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:10px;
+}
+
+div.fields h3:last-of-type{
+    font-size:15px;
+}
+
+form .required-field::before{
+    content: "*";
+    color: red;
+}
+
+div.call{
+    width:100%;
+    height:140px;
+    background-color:rgb(200,200,200);
+    text-align:center;
+    padding:60px 20px;
+    font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-mosaic{
+    display:flex;
+}
+
+.img-mosaic1{
+    background-image:url('../img/mosaic1.jpg');
+    background-size:cover;
+    background-position:center;
+    width:50%;
+    height:280px;
+    justify-content: flex-start;
+}
+
+.text-mosaic1{
+    width:50%;
+    justify-content: flex-end;
+    margin-left:auto;
+    padding:50px;
+    background-color:rgb(39, 134, 163);
+    color:white;
+}
+
+footer{
+    max-width:1024px;
+    margin:0 auto;
+    text-align:center;
+    padding:20px 0;
+    background-color:rgba(190,190,190,0.8);
+}
+
+footer div.container p{
+    margin-top:8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width:900px){
+    .container{
+        width:100%;
+        margin:0;
+    }
+
+    header{
+        width:100%;
+        padding:10px;
+        text-align:center;
+    }
+
+    .logo-left{
+        float:none;
+    }
+
+    .logo-right{
+        float:none;
+    }
+
+    .logo-left, .logo-right{
+        display:block;
+        margin:8px auto;
+    }
+
+    .banner-form{
+        padding:0 2%;
+        width:100%;
+        height:100%;
+    }
+    
+    form{
+        max-width:400px;
+        height:100%;
+        background-color:white;
+        float:none;
+        box-shadow:0 0 4px 4px rgba(0,0,0,0.2);
+        margin:0 auto;
+    }
+
+    .call{
+        display:none;
+    }
+
+    .flex-mosaic{
+        display:block;
+    }
+
+    .img-mosaic1{
+        padding-top:20%;
+        width:100%;
+    }
+
+    .text-mosaic1{
+        width:100%;
+    }
+
+
+}
+
+
+
+
+
