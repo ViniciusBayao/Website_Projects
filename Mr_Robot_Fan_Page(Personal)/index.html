@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Mr.robot Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="hack, serie, mr.robot, elliot" />
+        <meta name="description" content="Website about Mr.Robot Tv Show" />
+        <meta name="author" content="Vinicius" />
+        <link rel="shortcut icon" type ="image/png" href="img/mr_robot_icon.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <div class="background"></div><!--End of Background div-->
+
+        <div class="slideshow-background">
+            <div class="slideshow-container">
+                <div class="slides-fade">
+                    <img src="img/image1.png" style="width:100%" />
+                    <div class="text">Hello Friend, Hello Friend! Welcome to Mr. Robot fan page. Have fun!</div>
+                </div><!-- Close first div slide-->
+                
+                <div class="slides-fade">
+                    <img src="img/image2.png" style="width:100%" />
+                    <div class="text">What are the devices used by Elliot during the seasons? Come discover!</div>
+                </div><!-- Close first div slide-->
+    
+                <div class="slides-fade">
+                    <img src="img/image3.png" style="width:100%" />
+                    <div class="text">Why Python became so important to Cybersecurity? Discover more here!</div>
+                </div><!-- Close first div slide-->
+    
+                <!--Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div><!-- Closing slideshow div-->
+    
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div><!-- end dot/circles div-->
+        </div>
+
+        <nav>
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+            </div>
+
+            <ul>
+                <li><a href="#" class="active" target="_blank">Home</a></li>
+                <li><a href="#" target="_blank">About the show</a></li>
+                <li><a href="#" target = "_blank">Curiosities</a></li>
+                <li><a href="#" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="middle-content">
+            <div class="content-page">
+                <div class="video">
+                    <p>Presentation Video:</p>
+                    <video autoplay controls>
+                        <p>Presentation Video:</p>
+                        <source src="video/Mr. Robot  Hacking.mp4" type="video/mp4" />
+                        Your Browser does not support the video file(tag).
+                    </video>
+                </div><!--middle-content-->
+            </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <p>All rights reserved to Sam Esmail and USA Network.</p>
+            <p>Web fan page created by Vinicius Bayão.</p>
+            <p>2023.</p>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides-fade");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <script>
+            var ul = document.querySelector('nav ul');
+            var menuBtn = document.querySelector('.menu-btn i');
+            var video = document.querySelector('.video video');
+
+            function menuShow(){
+                if (ul.classList.contains('open')){
+                    ul.classList.remove('open');
+                }else{
+                    ul.classList.add('open');
+                    video.style.display = 'none';
+                }
+            }
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.background{
+    background-image: url("../img/mr_robot_banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 120px;
+}
+
+.slideshow-background{
+    margin-top: 1%;
+    background-image: linear-gradient(to top, rgba(31, 14, 14, 0.664), rgba(5, 5, 100, 0.247));
+}
+
+.slideshow-container {
+    width: 40%;
+    position: relative;
+    padding-top: 4%;
+    bottom: 20px;
+    margin: 0 auto;
+}
+
+/* Hide the images by default */
+.slides-fade {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 20px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0 auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing:  1px;
+}
+
+nav ul li a:active,
+nav ul li a:hover{
+    color: #999999;
+}
+
+.menu-btn i{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 920px){
+    .menu-btn i{
+        display: block;
+    }
+
+    nav{
+        display: block;
+        text-align: center;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display:block;
+        transition: all 0.3s ease;
+    }
+    nav ul.open{
+        left: 0;
+        margin: 0 auto;
+    }
+
+    nav ul li{
+        width: 100%;
+        margin: 50px 0;
+    }
+    nav ul li a{
+        font-size: 23px;
+    }
+    nav ul li a:active,
+    nav ul li a:hover{
+        background: none;
+        color: #f88f06;
+    }
+    .slideshow-container {
+        width: 90%;
+        position: relative;
+        padding-top: 4%;
+        bottom: 20px;
+        margin: 0 auto;
+    }
+    .video video{
+        background-size: auto;
+        width: 95%;
+        height: auto;
+    }
+
+    div.middle-content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.content-page{
+        display: block;
+    }
+}
+
+.middle-content .content-page{
+    background-image: linear-gradient(to bottom, rgba(250, 250, 250, 0.2), rgba(200, 210, 215, 0.73)), url("../img/mr_robot_mask.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 92%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 4px;
+}
+
+.video{
+    text-align: center;
+}
+
+.video video{
+    background-size: auto;
+    width: 50%;
+    height: 50%;
+    margin: 1% 0 2% auto;
+}
+
+.video p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(255, 99, 71, 0.9);
+    padding-top: 2%;
+    margin: 0 auto;
+}
+
+.footer{
+    margin-top: auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(224, 58, 28);
+    background-image: linear-gradient(to bottom, rgba(250, 250, 250, 0.151), rgba(200, 210, 215, 0.651));
+    padding: 10px 0;
+}
