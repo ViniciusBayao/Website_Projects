@@ -18,7 +18,7 @@ html,body{
     width:20%;
     height: 100%;
     position: fixed;
-    background-color: #512679;
+    background-color: #2e2679;
 }
 
 .sidebar-pos{
@@ -30,10 +30,10 @@ html,body{
 .img-sidebar{text-align: center;}
 
 .img-sidebar img{
-    width: 70%;
+    width: 50%;
     max-width: 100%;
     height: auto;
-    border:8px solid #62318e;
+    border:8px solid #31748e;
     border-radius: 50%;
 }
 
@@ -51,9 +51,12 @@ html,body{
     text-decoration: none;
 }
 
-.menu a.selected{
-    opacity: 1;
-    
+.menu a:hover{
+    color: #ccc;
+}
+
+.menu a.selected1, .menu a.selected2, .menu a.selected3{
+    opacity: 1;  
 }
 
 .content{
@@ -79,7 +82,7 @@ section.descricao h2{
 section.descricao h2 > span,
 section.descricao h3 > span
 {
-    color:  #62318e;
+    color:  #313a8e;
 }
 
 section.descricao h3{
